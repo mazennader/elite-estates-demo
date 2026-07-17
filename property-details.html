@@ -2,15 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Property Details | Elite Estates</title>
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Property Details | RE Real Estate</title>
+
+  <meta
+    name="description"
+    content="View property photos, specifications, location, price, and contact information with RE Real Estate."
+  />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -19,214 +41,522 @@
 
 <body>
 
-  <!-- LOADER -->
+  <!-- PAGE LOADER -->
   <div class="loader-wrapper" id="loader">
     <div class="loader"></div>
   </div>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
 
-    <a href="./index.html" class="logo-section">
+    <a href="index.html" class="logo-section">
 
       <div class="logo-icon">
-        <i class="fa-regular fa-building"></i>
+        <img
+          src="images/l.jpg"
+          alt="RE Real Estate Logo"
+        />
       </div>
 
-      <div>
-        <h2>Elite Estates</h2>
-        <p>Premium Real Estate</p>
+      <div class="logo-text">
+        <h2>RE</h2>
+        <p>Real Estate</p>
       </div>
 
     </a>
 
-    <nav class="nav">
+    <!-- NAVIGATION -->
+    <nav class="nav" id="navMenu">
 
-        <a href="index.html" class="nav-link active">
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </a>
-      
-      </nav>
+      <a href="index.html" class="nav-link">
+        Home
+      </a>
 
-    <a
-      href="https://wa.me/123456789"
-      target="_blank"
-      class="header-whatsapp"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-      WhatsApp
-    </a>
+      <a href="about.html" class="nav-link">
+        About Us
+      </a>
+
+      <a href="index.html#properties" class="nav-link active">
+        Properties
+      </a>
+
+      <a href="contact.html" class="nav-link">
+        Contact
+      </a>
+
+    </nav>
+
+    <div class="header-actions">
+
+      <a
+        href="https://wa.me/9613123123"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header-whatsapp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
 
   </header>
 
-  <!-- DETAILS PAGE -->
   <main class="details-page">
 
-    <!-- BREADCRUMB -->
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <span id="breadcrumbTitle">Property Details</span>
-    </div>
+    <!-- PAGE TOP -->
+    <section class="details-top">
+
+      <div class="breadcrumb">
+
+        <a href="index.html">
+          <i class="fa-solid fa-house"></i>
+          Home
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <a href="index.html#properties">
+          Properties
+        </a>
+
+        <i class="fa-solid fa-chevron-right"></i>
+
+        <span id="breadcrumbTitle">
+          Property Details
+        </span>
+
+      </div>
+
+      <a
+        href="index.html#properties"
+        class="back-properties-link"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Properties
+      </a>
+
+    </section>
+
+    <!-- PROPERTY HEADING -->
+    <section class="property-heading">
+
+      <div class="property-heading-main">
+
+        <div class="property-heading-badges">
+
+          <span
+            class="details-badge"
+            id="detailsBadge"
+          >
+            For Sale
+          </span>
+
+          <span
+            class="featured-badge"
+            id="featuredBadge"
+          >
+            <i class="fa-solid fa-star"></i>
+            Featured
+          </span>
+
+        </div>
+
+        <h1 id="detailTitle">
+          Modern Villa with Pool
+        </h1>
+
+        <div class="detail-location">
+
+          <i class="fa-solid fa-location-dot"></i>
+
+          <span id="detailLocation">
+            Beirut, Lebanon
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="property-heading-price">
+
+        <span>Property Price</span>
+
+        <strong id="detailPrice">
+          $850,000
+        </strong>
+
+      </div>
+
+    </section>
 
     <!-- IMAGE GALLERY -->
     <section class="details-gallery">
 
       <div class="main-image-wrap">
 
-        <span class="details-badge" id="detailsBadge">For Sale</span>
-
-        <button class="gallery-arrow left" id="prevImage">
+        <button
+          class="gallery-arrow gallery-arrow-left"
+          id="prevImage"
+          type="button"
+          aria-label="View previous property image"
+        >
           <i class="fa-solid fa-chevron-left"></i>
         </button>
 
         <img
           id="mainPropertyImage"
           src=""
-          alt="Property Image"
-        >
+          alt="Property image"
+        />
 
-        <button class="gallery-arrow right" id="nextImage">
+        <button
+          class="gallery-arrow gallery-arrow-right"
+          id="nextImage"
+          type="button"
+          aria-label="View next property image"
+        >
           <i class="fa-solid fa-chevron-right"></i>
         </button>
 
-        <div class="gallery-dots" id="galleryDots"></div>
+        <div class="gallery-counter">
+          <i class="fa-regular fa-images"></i>
+          <span id="galleryCounter">1 / 1</span>
+        </div>
+
+        <div
+          class="gallery-dots"
+          id="galleryDots"
+        ></div>
 
       </div>
 
-      <div class="thumbnail-row" id="thumbnailRow"></div>
+      <div
+        class="thumbnail-row"
+        id="thumbnailRow"
+      ></div>
 
     </section>
 
-    <!-- DETAILS CONTENT -->
+    <!-- PROPERTY DETAILS -->
     <section class="details-layout">
 
-      <!-- LEFT CARD -->
-      <div class="details-card">
+      <!-- MAIN CONTENT -->
+      <div class="details-main">
 
-        <h1 id="detailTitle">Modern Villa with Pool</h1>
+        <!-- PROPERTY OVERVIEW -->
+        <article class="details-card">
 
-        <div class="detail-location">
-          <i class="fa-solid fa-location-dot"></i>
-          <span id="detailLocation">Beverly Hills, CA</span>
-        </div>
+          <div class="details-card-heading">
 
-        <div class="detail-price" id="detailPrice">
-          $850,000
-        </div>
-
-        <div class="detail-stats">
-
-          <div class="detail-stat">
-            <div class="stat-icon orange">
-              <i class="fa-solid fa-bed"></i>
-            </div>
             <div>
-              <strong id="detailBeds">4</strong>
-              <span>Bedrooms</span>
+              <span class="section-label">
+                Property overview
+              </span>
+
+              <h2>Property Details</h2>
             </div>
+
+            <span class="property-reference">
+              Reference:
+              <strong id="propertyReference">RE-001</strong>
+            </span>
+
           </div>
 
-          <div class="detail-stat">
-            <div class="stat-icon blue">
-              <i class="fa-solid fa-bath"></i>
+          <div class="detail-stats">
+
+            <div class="detail-stat">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-bed"></i>
+              </div>
+
+              <div>
+                <strong id="detailBeds">4</strong>
+                <span>Bedrooms</span>
+              </div>
+
             </div>
-            <div>
-              <strong id="detailBaths">3</strong>
-              <span>Bathrooms</span>
+
+            <div class="detail-stat">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-bath"></i>
+              </div>
+
+              <div>
+                <strong id="detailBaths">3</strong>
+                <span>Bathrooms</span>
+              </div>
+
             </div>
+
+            <div class="detail-stat">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-ruler-combined"></i>
+              </div>
+
+              <div>
+                <strong id="detailAreaNumber">320</strong>
+                <span>m² Area</span>
+              </div>
+
+            </div>
+
+            <div class="detail-stat">
+
+              <div class="stat-icon">
+                <i class="fa-solid fa-car"></i>
+              </div>
+
+              <div>
+                <strong id="detailParking">2</strong>
+                <span>Parking</span>
+              </div>
+
+            </div>
+
           </div>
 
-          <div class="detail-stat">
-            <div class="stat-icon green">
-              <i class="fa-solid fa-expand"></i>
-            </div>
+        </article>
+
+        <!-- DESCRIPTION -->
+        <article class="details-card">
+
+          <div class="details-card-heading">
+
             <div>
-              <strong id="detailAreaNumber">320</strong>
-              <span>m² Area</span>
+              <span class="section-label">
+                About this property
+              </span>
+
+              <h2>Description</h2>
             </div>
+
           </div>
 
-          <div class="detail-stat">
-            <div class="stat-icon purple">
-              <i class="fa-solid fa-car"></i>
-            </div>
+          <p
+            class="detail-description"
+            id="detailDescription"
+          >
+            Stunning modern villa featuring contemporary architecture,
+            high-end finishes, spacious living areas, and a private
+            swimming pool.
+          </p>
+
+        </article>
+
+        <!-- PROPERTY FEATURES -->
+        <article class="details-card">
+
+          <div class="details-card-heading">
+
             <div>
-              <strong id="detailParking">2</strong>
-              <span>Parking</span>
+              <span class="section-label">
+                Included features
+              </span>
+
+              <h2>Property Features</h2>
             </div>
+
           </div>
 
-        </div>
+          <div
+            class="amenities-grid"
+            id="amenitiesGrid"
+          >
 
-        <hr>
+            <!-- These can later be inserted dynamically using JavaScript -->
 
-        <h2>Description</h2>
+            <div class="amenity-item">
+              <i class="fa-solid fa-circle-check"></i>
+              Balcony
+            </div>
 
-        <p class="detail-description" id="detailDescription">
-          Stunning modern villa featuring contemporary architecture,
-          high-end finishes, and a beautiful swimming pool.
-        </p>
+            <div class="amenity-item">
+              <i class="fa-solid fa-circle-check"></i>
+              Parking
+            </div>
+
+            <div class="amenity-item">
+              <i class="fa-solid fa-circle-check"></i>
+              Air Conditioning
+            </div>
+
+            <div class="amenity-item">
+              <i class="fa-solid fa-circle-check"></i>
+              Elevator
+            </div>
+
+          </div>
+
+        </article>
+
+        <!-- LOCATION -->
+        <article class="details-card">
+
+          <div class="details-card-heading">
+
+            <div>
+              <span class="section-label">
+                Property location
+              </span>
+
+              <h2>Location</h2>
+            </div>
+
+          </div>
+
+          <div class="property-map">
+
+            <iframe
+              id="propertyMap"
+              src="https://maps.google.com/maps?q=Beirut%20Lebanon&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Property location map"
+            ></iframe>
+
+          </div>
+
+        </article>
 
       </div>
 
-      <!-- RIGHT SIDEBAR -->
+      <!-- SIDEBAR -->
       <aside class="details-sidebar">
 
-        <h2>Interested?</h2>
+        <!-- CONTACT CARD -->
+        <div class="sidebar-card inquiry-card">
 
-        <a
-          href="https://wa.me/123456789"
-          target="_blank"
-          class="details-whatsapp"
-          id="detailsWhatsApp"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-          Ask About This Property
-        </a>
+          <span class="section-label">
+            Interested?
+          </span>
 
-        <div class="info-list">
+          <h2>Ask About This Property</h2>
 
-          <div class="info-row">
-            <span>Property Type</span>
-            <strong id="sideType">Sale</strong>
-          </div>
+          <p>
+            Contact our team for more details or to schedule a property visit.
+          </p>
 
-          <div class="info-row">
-            <span>Bedrooms</span>
-            <strong id="sideBeds">4</strong>
-          </div>
+          <a
+            href="https://wa.me/9613123123"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="details-whatsapp"
+            id="detailsWhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            Message on WhatsApp
+          </a>
 
-          <div class="info-row">
-            <span>Bathrooms</span>
-            <strong id="sideBaths">3</strong>
-          </div>
+          <a
+            href="tel:+9613123123"
+            class="details-phone-button"
+          >
+            <i class="fa-solid fa-phone"></i>
+            Call the Agent
+          </a>
 
-          <div class="info-row">
-            <span>Area</span>
-            <strong id="sideArea">320 m²</strong>
-          </div>
+        </div>
 
-          <div class="info-row">
-            <span>Parking</span>
-            <strong id="sideParking">2 spaces</strong>
-          </div>
+        <!-- PROPERTY INFORMATION -->
+        <div class="sidebar-card">
 
-          <div class="info-row">
-            <span>Featured</span>
-            <strong>Yes</strong>
+          <h3>Property Information</h3>
+
+          <div class="info-list">
+
+            <div class="info-row">
+              <span>Listing Type</span>
+              <strong id="sideListingType">For Sale</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Property Type</span>
+              <strong id="sideType">Villa</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Bedrooms</span>
+              <strong id="sideBeds">4</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Bathrooms</span>
+              <strong id="sideBaths">3</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Area</span>
+              <strong id="sideArea">320 m²</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Parking</span>
+              <strong id="sideParking">2 spaces</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Furnished</span>
+              <strong id="sideFurnished">No</strong>
+            </div>
+
+            <div class="info-row">
+              <span>Reference</span>
+              <strong id="sideReference">RE-001</strong>
+            </div>
+
           </div>
 
         </div>
 
-        <div class="side-contact">
+        <!-- AGENT CARD -->
+        <div class="sidebar-card agent-card">
 
-          <h3>Contact Information</h3>
+          <div class="agent-profile">
 
-          <p>Phone: +961 03123123</p>
+            <div class="agent-image">
 
-          <p>Email: info@eliteestates.com</p>
+              <i class="fa-solid fa-user-tie"></i>
+
+            </div>
+
+            <div>
+              <span>Listed by</span>
+              <h3>RE Real Estate</h3>
+              <p>Professional Property Agent</p>
+            </div>
+
+          </div>
+
+          <div class="agent-contact-list">
+
+            <a href="tel:+9613123123">
+              <i class="fa-solid fa-phone"></i>
+              +961 3 123 123
+            </a>
+
+            <a href="mailto:info@rerealestate.com">
+              <i class="fa-solid fa-envelope"></i>
+              info@rerealestate.com
+            </a>
+
+          </div>
 
         </div>
 
@@ -236,6 +566,111 @@
 
   </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <img
+            src="images/l.jpg"
+            alt="RE Real Estate Logo"
+          />
+
+          <div>
+            <h3>RE</h3>
+            <p>Real Estate</p>
+          </div>
+
+        </div>
+
+        <p class="footer-description">
+          Helping clients discover properties that match their
+          requirements, lifestyle, and budget.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Quick Links</h4>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="index.html#properties">Properties</a>
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Property Types</h4>
+
+        <a href="index.html#properties">Apartments</a>
+        <a href="index.html#properties">Villas</a>
+        <a href="index.html#properties">Commercial</a>
+        <a href="index.html#properties">Land</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Contact</h4>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Beirut, Lebanon
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +961 3 123 123
+        </p>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          info@rerealestate.com
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 RE Real Estate. All rights reserved.
+      </p>
+
+      <div class="footer-socials">
+
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://wa.me/9613123123"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>

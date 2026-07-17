@@ -2,334 +2,866 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite Estates</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>RE Real Estate | Properties in Lebanon</title>
+
+  <meta
+    name="description"
+    content="Discover apartments, villas, land, and rental properties across Lebanon with RE Real Estate."
+  />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
 
-  <!-- FONT AWESOME -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
-
 </head>
 
 <body>
 
-  <!-- LOADER -->
+  <!-- PAGE LOADER -->
   <div class="loader-wrapper" id="loader">
     <div class="loader"></div>
   </div>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
 
-    <div class="logo-section">
+    <a href="index.html" class="logo-section">
 
       <div class="logo-icon">
-        <i class="fa-regular fa-building"></i>
+        <img
+          src="images/l.jpg"
+          alt="RE Real Estate Logo"
+        />
       </div>
 
-      <div>
-        <h2>Elite Estates</h2>
-        <p>Premium Real Estate</p>
+      <div class="logo-text">
+        <h2>RE</h2>
+        <p>Real Estate</p>
       </div>
+
+    </a>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="nav" id="navMenu">
+
+      <a href="index.html" class="nav-link active">
+        Home
+      </a>
+
+      <a href="about.html" class="nav-link">
+        About Us
+      </a>
+
+      <a href="#properties" class="nav-link">
+        Properties
+      </a>
+
+      <a href="contact.html" class="nav-link">
+        Contact
+      </a>
+
+    </nav>
+
+    <div class="header-actions">
+
+      <!-- Replace with the real number:
+           country code + number without the first zero -->
+      <a
+        href="https://wa.me/9613123123"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header-whatsapp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
     </div>
-
-    <nav class="nav">
-
-        <a href="index.html" class="nav-link active">
-          <i class="fa-solid fa-house"></i>
-          <span>Home</span>
-        </a>
-      
-      </nav>
-
-    <a
-      href="https://wa.me/123456789"
-      target="_blank"
-      class="header-whatsapp"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-      WhatsApp
-    </a>
 
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <main>
 
-    <div class="hero-overlay"></div>
+    <!-- HERO -->
+    <section class="hero">
 
-    <img
-      src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop"
-      alt=""
-      class="hero-bg"
+      <img
+        src="images/hero.png"
+        alt="Modern luxury property"
+        class="hero-bg"
+      />
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-label">
+          <i class="fa-solid fa-location-dot"></i>
+          Properties across Lebanon
+        </div>
+
+        <h1>
+          Find a Property That
+          <span>Feels Like Home</span>
+        </h1>
+
+        <p class="hero-description">
+          Search apartments, villas, offices, and land using your
+          preferred location, budget, and property requirements.
+        </p>
+
+        <!-- PROFESSIONAL PROPERTY FILTER -->
+        <form class="property-search" id="propertySearchForm">
+
+          <div class="search-grid">
+
+            <!-- LOCATION / KEYWORD -->
+            <div class="filter-field filter-field-large">
+
+              <label for="searchInput">
+                Location or keyword
+              </label>
+
+              <div class="filter-control">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <input
+                  type="text"
+                  id="searchInput"
+                  name="search"
+                  placeholder="Beirut, Jounieh, apartment..."
+                  autocomplete="off"
+                />
+
+              </div>
+
+            </div>
+
+            <!-- LISTING TYPE -->
+            <div class="filter-field">
+
+              <label for="listingType">
+                Listing type
+              </label>
+
+              <div class="filter-control">
+
+                <i class="fa-solid fa-tag"></i>
+
+                <select id="listingType" name="listingType">
+                  <option value="all">Buy or Rent</option>
+                  <option value="sale">For Sale</option>
+                  <option value="rent">For Rent</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+              </div>
+
+            </div>
+
+            <!-- PROPERTY CATEGORY -->
+            <div class="filter-field">
+
+              <label for="propertyCategory">
+                Property type
+              </label>
+
+              <div class="filter-control">
+
+                <i class="fa-solid fa-building"></i>
+
+                <select
+                  id="propertyCategory"
+                  name="propertyCategory"
+                >
+                  <option value="all">All Types</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="villa">Villa</option>
+                  <option value="house">House</option>
+                  <option value="office">Office</option>
+                  <option value="shop">Shop</option>
+                  <option value="warehouse">Warehouse</option>
+                  <option value="land">Land</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+              </div>
+
+            </div>
+
+            <!-- MINIMUM PRICE -->
+            <div class="filter-field">
+
+              <label for="minPrice">
+                Minimum price
+              </label>
+
+              <div class="filter-control">
+
+                <i class="fa-solid fa-dollar-sign"></i>
+
+                <input
+                  type="number"
+                  id="minPrice"
+                  name="minPrice"
+                  placeholder="Min price"
+                  min="0"
+                />
+
+              </div>
+
+            </div>
+
+            <!-- MAXIMUM PRICE -->
+            <div class="filter-field">
+
+              <label for="maxPrice">
+                Maximum price
+              </label>
+
+              <div class="filter-control">
+
+                <i class="fa-solid fa-dollar-sign"></i>
+
+                <input
+                  type="number"
+                  id="maxPrice"
+                  name="maxPrice"
+                  placeholder="Max price"
+                  min="0"
+                />
+
+              </div>
+
+            </div>
+
+            <!-- BEDROOMS -->
+            <div class="filter-field">
+
+              <label for="bedroomsFilter">
+                Bedrooms
+              </label>
+
+              <div class="filter-control">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <select
+                  id="bedroomsFilter"
+                  name="bedrooms"
+                >
+                  <option value="all">Any</option>
+                  <option value="1">1+</option>
+                  <option value="2">2+</option>
+                  <option value="3">3+</option>
+                  <option value="4">4+</option>
+                  <option value="5">5+</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+              </div>
+
+            </div>
+
+            <!-- SEARCH BUTTON -->
+            <div class="filter-field search-button-field">
+
+              <button
+                type="submit"
+                class="search-button"
+                id="searchBtn"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search Properties
+              </button>
+
+            </div>
+
+          </div>
+
+          <div class="search-bottom">
+
+            <button
+              type="button"
+              class="advanced-filter-button"
+              id="advancedFilterBtn"
+            >
+              <i class="fa-solid fa-sliders"></i>
+              More filters
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <button
+              type="button"
+              class="clear-filters-button"
+              id="clearFiltersBtn"
+            >
+              Clear filters
+            </button>
+
+          </div>
+
+          <!-- ADVANCED FILTERS -->
+          <div
+            class="advanced-filters"
+            id="advancedFilters"
+          >
+
+            <div class="advanced-filter-grid">
+
+              <!-- BATHROOMS -->
+              <div class="filter-field">
+
+                <label for="bathroomsFilter">
+                  Bathrooms
+                </label>
+
+                <div class="filter-control">
+
+                  <i class="fa-solid fa-bath"></i>
+
+                  <select
+                    id="bathroomsFilter"
+                    name="bathrooms"
+                  >
+                    <option value="all">Any</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                  </select>
+
+                  <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                </div>
+
+              </div>
+
+              <!-- MINIMUM AREA -->
+              <div class="filter-field">
+
+                <label for="minArea">
+                  Minimum area
+                </label>
+
+                <div class="filter-control">
+
+                  <i class="fa-solid fa-ruler-combined"></i>
+
+                  <input
+                    type="number"
+                    id="minArea"
+                    name="minArea"
+                    placeholder="Minimum m²"
+                    min="0"
+                  />
+
+                </div>
+
+              </div>
+
+              <!-- MAXIMUM AREA -->
+              <div class="filter-field">
+
+                <label for="maxArea">
+                  Maximum area
+                </label>
+
+                <div class="filter-control">
+
+                  <i class="fa-solid fa-ruler-combined"></i>
+
+                  <input
+                    type="number"
+                    id="maxArea"
+                    name="maxArea"
+                    placeholder="Maximum m²"
+                    min="0"
+                  />
+
+                </div>
+
+              </div>
+
+              <!-- FURNISHED -->
+              <div class="filter-field">
+
+                <label for="furnishedFilter">
+                  Furnishing
+                </label>
+
+                <div class="filter-control">
+
+                  <i class="fa-solid fa-couch"></i>
+
+                  <select
+                    id="furnishedFilter"
+                    name="furnished"
+                  >
+                    <option value="all">Any</option>
+                    <option value="furnished">Furnished</option>
+                    <option value="unfurnished">Unfurnished</option>
+                  </select>
+
+                  <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </form>
+
+        <!-- QUICK FILTERS -->
+        <div class="quick-filters">
+
+          <span>Popular:</span>
+
+          <button
+            type="button"
+            class="quick-filter-btn"
+            data-filter="sale"
+          >
+            For Sale
+          </button>
+
+          <button
+            type="button"
+            class="quick-filter-btn"
+            data-filter="rent"
+          >
+            For Rent
+          </button>
+
+          <button
+            type="button"
+            class="quick-filter-btn"
+            data-category="apartment"
+          >
+            Apartments
+          </button>
+
+          <button
+            type="button"
+            class="quick-filter-btn"
+            data-category="land"
+          >
+            Land
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROPERTY RESULTS -->
+    <section
+      class="properties-section"
+      id="properties"
     >
 
-    <div class="hero-content">
+      <div class="section-heading">
 
-      <h1>Find Your Dream Home</h1>
+        <div>
 
-      <p>
-        Discover premium properties in the most desirable locations
-      </p>
+          <span class="section-label">
+            Explore our listings
+          </span>
 
-      <!-- SEARCH -->
-      <div class="search-box">
+          <h2>Available Properties</h2>
 
-        <div class="search-input">
+          <p id="resultsText">
+            Browse our latest available properties
+          </p>
 
-          <i class="fa-solid fa-location-dot"></i>
+        </div>
 
-          <input
-            type="text"
-            placeholder="Search by location or property name..."
-            id="searchInput"
+        <div class="results-actions">
+
+          <label for="sortProperties">
+            Sort by
+          </label>
+
+          <select id="sortProperties">
+            <option value="newest">Newest First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="area-large">Largest Area</option>
+          </select>
+
+        </div>
+
+      </div>
+
+      <div
+        class="properties-grid"
+        id="propertiesGrid"
+      >
+        <!-- JavaScript inserts property cards -->
+      </div>
+
+      <!-- NO RESULTS -->
+      <div
+        class="no-results"
+        id="noResults"
+        hidden
+      >
+
+        <div class="no-results-icon">
+          <i class="fa-solid fa-house-circle-xmark"></i>
+        </div>
+
+        <h3>No properties found</h3>
+
+        <p>
+          Try changing your location, price, or property filters.
+        </p>
+
+        <button
+          type="button"
+          id="resetSearchBtn"
+          class="reset-search-button"
+        >
+          Reset Search
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="about-preview">
+
+      <div class="about-preview-container">
+
+        <div class="about-image">
+
+          <img
+            src="images/about-property.jpg"
+            alt="Professional real estate property"
           />
 
+          <div class="experience-card">
+            <strong>15+</strong>
+            <span>Years of experience</span>
+          </div>
+
         </div>
 
-        <button id="searchBtn">
+        <div class="about-content">
 
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <span class="section-label">
+            About RE Real Estate
+          </span>
 
-          Search
+          <h2>
+            Your Trusted Partner in Real Estate
+          </h2>
 
-        </button>
+          <p>
+            We help buyers, tenants, sellers, and investors find
+            the right property through professional service,
+            local market knowledge, and carefully selected listings.
+          </p>
+
+          <div class="about-points">
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              Verified property listings
+            </div>
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              Professional property guidance
+            </div>
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              Local market expertise
+            </div>
+
+          </div>
+
+          <a href="about.html" class="primary-link">
+            Learn More About Us
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
 
       </div>
 
-      <!-- FILTERS -->
-      <div class="filter-buttons">
+    </section>
 
-        <button class="filter-btn active" data-filter="all">
-          All Properties
-        </button>
+    <!-- SERVICES / FEATURES -->
+    <section class="features-section">
 
-        <button class="filter-btn" data-filter="sale">
-          For Sale
-        </button>
+      <div class="section-heading centered-heading">
 
-        <button class="filter-btn" data-filter="rent">
-          For Rent
-        </button>
+        <div>
 
-      </div>
+          <span class="section-label">
+            Why choose us
+          </span>
 
-    </div>
-
-  </section>
-
-  <!-- PROPERTIES -->
-  <section class="properties-section">
-
-    <div class="section-title">
-
-      <h2>Available Properties</h2>
-
-      <p id="resultsText">
-        6 properties match your search
-      </p>
-
-    </div>
-
-    <div
-      class="properties-grid"
-      id="propertiesGrid"
-    >
-
-      <!-- JS INSERTS CARDS -->
-
-    </div>
-
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about-section">
-
-    <div class="about-container">
-
-      <h2>
-        About <span>Elite Estates</span>
-      </h2>
-
-      <p class="about-text">
-
-        With over 15 years of experience in the real estate market,
-        Elite Estates has become the trusted name for buying,
-        selling, and renting premium properties.
-        Our expert team is dedicated to helping you find
-        your perfect home.
-
-      </p>
-
-      <div class="about-features">
-
-        <!-- FEATURE -->
-        <div class="feature-box">
-
-          <div class="feature-icon">
-            <i class="fa-solid fa-medal"></i>
-          </div>
-
-          <h3>Award Winning</h3>
+          <h2>A Better Property Experience</h2>
 
           <p>
-            Recognized for excellence in real estate services
-          </p>
-
-        </div>
-
-        <!-- FEATURE -->
-        <div class="feature-box">
-
-          <div class="feature-icon">
-            <i class="fa-solid fa-users"></i>
-          </div>
-
-          <h3>Expert Team</h3>
-
-          <p>
-            Professional agents with local market expertise
-          </p>
-
-        </div>
-
-        <!-- FEATURE -->
-        <div class="feature-box">
-
-          <div class="feature-icon">
-            <i class="fa-solid fa-building"></i>
-          </div>
-
-          <h3>Premium Properties</h3>
-
-          <p>
-            Curated selection of luxury homes and estates
+            Professional support throughout your real estate journey.
           </p>
 
         </div>
 
       </div>
 
-    </div>
+      <div class="features-grid">
 
-  </section>
+        <article class="feature-card">
 
-  <!-- CONTACT -->
-  <section class="contact-section">
+          <div class="feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
 
-    <div class="section-title">
+          <h3>Trusted Listings</h3>
 
-      <h2>Get In Touch</h2>
+          <p>
+            Property information is reviewed before being published.
+          </p>
 
-      <p>
-        Ready to find your dream property? Contact us today
-      </p>
+        </article>
 
-    </div>
+        <article class="feature-card">
 
-    <div class="contact-container">
+          <div class="feature-icon">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
 
-      <!-- LEFT -->
-      <div class="contact-card">
+          <h3>Expert Support</h3>
 
-        <h3>Contact Information</h3>
+          <p>
+            Receive professional help when buying, renting, or selling.
+          </p>
 
-        <div class="contact-item">
+        </article>
 
-          <span>Phone</span>
+        <article class="feature-card">
 
-          <strong>+961 03123123</strong>
+          <div class="feature-icon">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
 
-        </div>
+          <h3>Local Knowledge</h3>
 
-        <div class="contact-item">
+          <p>
+            Explore suitable properties across Lebanon’s main areas.
+          </p>
 
-          <span>Email</span>
-
-          <strong>info@eliteestates.com</strong>
-
-        </div>
-
-        <div class="contact-item">
-
-          <span>Address</span>
-
-          <strong>
-
-           beirut
-
-            <br>
-
-            street...
-
-          </strong>
-
-        </div>
-
-        <a
-          href="https://wa.me/123456789"
-          target="_blank"
-          class="contact-whatsapp"
-        >
-
-          <i class="fa-brands fa-whatsapp"></i>
-
-          Message on WhatsApp
-
-        </a>
+        </article>
 
       </div>
 
-      <!-- MAP -->
-      <div class="map-container">
+    </section>
 
-        <iframe
-  src="https://maps.google.com/maps?q=Beirut%20Lebanon&t=&z=13&ie=UTF8&iwloc=&output=embed"
-  loading="lazy"
-  allowfullscreen
-></iframe>
+    <!-- CONTACT CTA -->
+    <section class="contact-cta">
+
+      <div class="contact-cta-overlay"></div>
+
+      <div class="contact-cta-content">
+
+        <span class="section-label light-label">
+          Need personal assistance?
+        </span>
+
+        <h2>
+          Let Us Help You Find the Right Property
+        </h2>
+
+        <p>
+          Tell us what you are looking for and our team will help
+          you find suitable available properties.
+        </p>
+
+        <div class="contact-cta-buttons">
+
+          <a
+            href="contact.html"
+            class="cta-primary"
+          >
+            Contact Our Team
+          </a>
+
+          <a
+            href="https://wa.me/9613123123"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-whatsapp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp Us
+          </a>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
 
-    <div class="footer-center">
+    <div class="footer-container">
 
-        <h3>Elite Estates</h3>
-      
-        <p>Premium Real Estate Services</p>
-      
+      <div class="footer-brand">
+
+        <div class="footer-logo">
+
+          <img
+            src="images/l.jpg"
+            alt="RE Real Estate Logo"
+          />
+
+          <div>
+            <h3>RE</h3>
+            <p>Real Estate</p>
+          </div>
+
+        </div>
+
+        <p class="footer-description">
+          Helping clients discover properties that match their
+          lifestyle, requirements, and budget.
+        </p>
+
       </div>
-      
-      <div class="footer-bottom">
-      
-        © 2026 Elite Estates. All rights reserved.
-      
+
+      <div class="footer-column">
+
+        <h4>Quick Links</h4>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#properties">Properties</a>
+        <a href="contact.html">Contact</a>
+
       </div>
+
+      <div class="footer-column">
+
+        <h4>Property Types</h4>
+
+        <a href="#properties">Apartments</a>
+        <a href="#properties">Villas</a>
+        <a href="#properties">Commercial</a>
+        <a href="#properties">Land</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <h4>Contact</h4>
+
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          Beirut, Lebanon
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +961 3 123 123
+        </p>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          info@rerealestate.com
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 RE Real Estate. All rights reserved.
+      </p>
+
+      <div class="footer-socials">
+
+        <a href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://wa.me/9613123123"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
 
   </footer>
 
-  <!-- MODAL -->
+  <!-- PROPERTY MODAL -->
   <div
     class="property-modal"
     id="propertyModal"
+    aria-hidden="true"
   >
 
     <div
@@ -337,15 +869,20 @@
       id="modalOverlay"
     ></div>
 
-    <div class="modal-content">
+    <div
+      class="modal-content"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Property details"
+    >
 
       <button
         class="close-modal"
         id="closeModal"
+        type="button"
+        aria-label="Close property details"
       >
-
         <i class="fa-solid fa-xmark"></i>
-
       </button>
 
       <div id="modalBody"></div>
@@ -354,7 +891,7 @@
 
   </div>
 
-  <!-- JS -->
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
