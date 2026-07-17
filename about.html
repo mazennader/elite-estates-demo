@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +13,13 @@
 
   <meta
     name="description"
-    content="Learn more about RE Real Estate and how we help clients find properties across Lebanon."
+    content="Learn more about RE Real Estate and our property services across Lebanon."
   />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <link
@@ -30,6 +33,7 @@
     rel="stylesheet"
   />
 
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -38,13 +42,13 @@
 
 <body>
 
-  <!-- LOADER -->
+  <!-- PAGE LOADER -->
   <div class="loader-wrapper" id="loader">
     <div class="loader"></div>
   </div>
 
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" id="header">
 
     <a href="index.html" class="logo-section">
 
@@ -62,6 +66,7 @@
 
     </a>
 
+    <!-- DESKTOP NAVIGATION -->
     <nav class="nav" id="navMenu">
 
       <a href="index.html" class="nav-link">
@@ -94,6 +99,7 @@
         <span>WhatsApp</span>
       </a>
 
+      <!-- MOBILE MENU BUTTON -->
       <button
         class="menu-toggle"
         id="menuToggle"
@@ -110,69 +116,68 @@
 
   <main>
 
-    <!-- SIMPLE ABOUT HERO -->
-    <section class="about-section">
+    <!-- ABOUT PAGE -->
+    <section class="about-preview inner-page-section">
 
-      <div class="about-container">
+      <div class="about-preview-container">
 
-        <span class="section-label light-label">
-          About RE Real Estate
-        </span>
+        <div class="about-image">
 
-        <h2>
-          Helping You Find the
-          <span>Right Property</span>
-        </h2>
+          <img
+            src="images/about-property.jpg"
+            alt="RE Real Estate property"
+          />
 
-        <p class="about-text">
-          RE Real Estate helps clients buy, rent, and discover
-          properties across Lebanon. We focus on clear communication,
-          trusted service, and properties that match your needs.
-        </p>
+          <div class="experience-card">
+            <strong>15+</strong>
+            <span>Years of experience</span>
+          </div>
 
-        <div class="about-features">
+        </div>
 
-          <div class="feature-box">
+        <div class="about-content">
 
-            <div class="feature-icon">
-              <i class="fa-solid fa-house"></i>
+          <span class="section-label">
+            About RE Real Estate
+          </span>
+
+          <h1>
+            Your Trusted Property Partner
+          </h1>
+
+          <p>
+            We help clients buy, rent, and discover suitable
+            properties across Lebanon.
+          </p>
+
+          <p>
+            Our goal is to make your property search simple,
+            clear, and professional.
+          </p>
+
+          <div class="about-points">
+
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              Verified property listings
             </div>
 
-            <h3>Quality Properties</h3>
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              Professional guidance
+            </div>
 
-            <p>
-              Carefully selected apartments, villas, and land.
-            </p>
+            <div class="about-point">
+              <i class="fa-solid fa-circle-check"></i>
+              Local market knowledge
+            </div>
 
           </div>
 
-          <div class="feature-box">
-
-            <div class="feature-icon">
-              <i class="fa-solid fa-handshake"></i>
-            </div>
-
-            <h3>Trusted Service</h3>
-
-            <p>
-              Honest guidance throughout your property search.
-            </p>
-
-          </div>
-
-          <div class="feature-box">
-
-            <div class="feature-icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-
-            <h3>Local Knowledge</h3>
-
-            <p>
-              Helping clients find properties in the right location.
-            </p>
-
-          </div>
+          <a href="contact.html" class="primary-link">
+            Contact Our Team
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
 
         </div>
 
@@ -180,25 +185,97 @@
 
     </section>
 
-    <!-- SMALL CONTACT CTA -->
+    <!-- SMALL FEATURES -->
+    <section class="features-section">
+
+      <div class="section-heading centered-heading">
+
+        <div>
+
+          <span class="section-label">
+            Why choose us
+          </span>
+
+          <h2>Simple and Reliable Service</h2>
+
+        </div>
+
+      </div>
+
+      <div class="features-grid">
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+
+          <h3>Quality Properties</h3>
+
+          <p>
+            Apartments, villas, commercial properties, and land.
+          </p>
+
+        </article>
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+
+          <h3>Trusted Support</h3>
+
+          <p>
+            Clear communication during your property search.
+          </p>
+
+        </article>
+
+        <article class="feature-card">
+
+          <div class="feature-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <h3>Local Experience</h3>
+
+          <p>
+            Property knowledge across Lebanon’s main areas.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT CTA -->
     <section class="contact-cta">
+
+      <div class="contact-cta-overlay"></div>
 
       <div class="contact-cta-content">
 
         <span class="section-label light-label">
-          Start Your Search
+          Looking for a property?
         </span>
 
-        <h2>Looking for a Property?</h2>
+        <h2>
+          Let Us Help You Find It
+        </h2>
 
         <p>
-          Contact us and tell us what you are looking for.
+          Tell us your location, budget, and property requirements.
         </p>
 
         <div class="contact-cta-buttons">
 
-          <a href="contact.html" class="cta-primary">
-            Contact Us
+          <a
+            href="contact.html"
+            class="cta-primary"
+          >
+            Contact Our Team
           </a>
 
           <a
@@ -208,7 +285,7 @@
             class="cta-whatsapp"
           >
             <i class="fa-brands fa-whatsapp"></i>
-            WhatsApp
+            WhatsApp Us
           </a>
 
         </div>
@@ -241,7 +318,8 @@
         </div>
 
         <p class="footer-description">
-          Helping clients discover properties across Lebanon.
+          Helping clients discover properties that match their
+          lifestyle, requirements, and budget.
         </p>
 
       </div>
@@ -259,6 +337,17 @@
 
       <div class="footer-column">
 
+        <h4>Property Types</h4>
+
+        <a href="index.html#properties">Apartments</a>
+        <a href="index.html#properties">Villas</a>
+        <a href="index.html#properties">Commercial</a>
+        <a href="index.html#properties">Land</a>
+
+      </div>
+
+      <div class="footer-column">
+
         <h4>Contact</h4>
 
         <p>
@@ -271,19 +360,10 @@
           +961 3 123 123
         </p>
 
-      </div>
-
-      <div class="footer-column">
-
-        <h4>Follow Us</h4>
-
-        <a href="#">
-          Instagram
-        </a>
-
-        <a href="#">
-          Facebook
-        </a>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          info@rerealestate.com
+        </p>
 
       </div>
 
@@ -320,7 +400,9 @@
 
   </footer>
 
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
 </html>
+```
