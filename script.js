@@ -26,9 +26,9 @@ const properties = [
     ],
 
     images: [
-      "images/villa1.jpg",
-      "images/villa2.jpg",
-      "images/villa3.jpg"
+      "images/villa1.png",
+      "images/villa2.png",
+      "images/villa3.png"
     ],
 
     description:
@@ -62,9 +62,9 @@ const properties = [
     ],
 
     images: [
-      "images/villa1.jpg",
-      "images/villa2.jpg",
-      "images/villa3.jpg"
+      "images/villa1.png",
+      "images/villa2.png",
+      "images/villa3.png"
     ],
 
     description:
@@ -95,9 +95,9 @@ const properties = [
     ],
 
     images: [
-      "images/villa1.jpg",
-      "images/villa2.jpg",
-      "images/villa3.jpg"
+      "images/villa1.png",
+      "images/villa2.png",
+      "images/villa3.png"
     ],
 
     description:
