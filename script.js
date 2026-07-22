@@ -26,9 +26,9 @@ const properties = [
     ],
 
     images: [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?q=80&w=1600&auto=format&fit=crop"
+      "images/villa1.jpg",
+      "images/villa2.jpg",
+      "images/villa3.jpg"
     ],
 
     description:
@@ -62,9 +62,9 @@ const properties = [
     ],
 
     images: [
-      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=1600&auto=format&fit=crop"
+      "images/villa1.jpg",
+      "images/villa2.jpg",
+      "images/villa3.jpg"
     ],
 
     description:
@@ -95,9 +95,9 @@ const properties = [
     ],
 
     images: [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1473773508845-188df298d2d1?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?q=80&w=1600&auto=format&fit=crop"
+      "images/villa1.jpg",
+      "images/villa2.jpg",
+      "images/villa3.jpg"
     ],
 
     description:
